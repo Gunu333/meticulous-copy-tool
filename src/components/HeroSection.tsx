@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import CodeGlass from "./CodeGlass";
 
 const HeroSection = () => {
@@ -19,9 +20,11 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button variant="hero" size="lg" className="gap-2">
-              <Zap className="w-5 h-5" />
-              Start Learning
+            <Button variant="hero" size="lg" className="gap-2" asChild>
+              <Link to="/chat">
+                <Zap className="w-5 h-5" />
+                Start Learning
+              </Link>
             </Button>
             <Button variant="outline-hero" size="lg" className="gap-2">
               Watch Tutorials
